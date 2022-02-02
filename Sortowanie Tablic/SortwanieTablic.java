@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 
 class SortowanieTablic {
     public static void main(String[] args) {
@@ -24,6 +25,12 @@ class SortowanieTablic {
         }
         long executionTime = System.currentTimeMillis() - millisActualTime;
         System.out.println("Sortowanie bąbelkowe czas wykonania: " + executionTime);
+
+        int[] tabQuick = Arrays.copyOf(tab, tab.length);
+        millisActualTime = System.currentTimeMillis();
+        Arrays.sort(tabQuick);
+        executionTime = System.currentTimeMillis() - millisActualTime;
+        System.out.println("Sortowanie quicksort czas wykonania: " + executionTime);
 
     }
 }
